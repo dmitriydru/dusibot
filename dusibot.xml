@@ -1,97 +1,734 @@
-<context>
-    <input>
-        <pattern value="repeat([дуся|всем] (привет|здравствуй*) [дуся])"/>
+<context> 
+<input pattern="
+[всех] радиостанций
+">
+<output> 
+<![CDATA[ 
+DFM, Авторадио, Виктор Цой, Детские песни, Детские сказки, 
+Comedy Radio, Россия девяностых, Руки вверх, Юмор ФМ, Авторадио Ижевск, Бизнес ФМ, 
+Наше радио, радио ВОС, Радио рансис, Радио логос, Вести Москвы, Юмор Ижевск, 
+семья, Спорт ФМ, Клубная музыка, Прикольные песни, Эхо Москвы, лабиринт, Радио свобода, портальное, 
+радио лайф ньюс, Дача, Русское радио, Вести ФМ, Моя Удмуртия, Анекдоты, Михаил круг, Energy house
+]]> </output> 
+</input> 
+<input pattern="
+пупс*
+">
+<output> 
+<![CDATA[ 
+Раз пупсик два пупсик три пупсик
+]]> </output> 
+</input> 
+<input pattern="
+([всех] телеканалов|[всех] каналов)
+">
+<output> 
+<![CDATA[ 
+Русская ночь, Россия 24, Карусель, Национальная география, ТНТ, пятый канал, 
+Эротика 1, эротика 2, эротика 3, эротика 4, Европа плюс, MTV Россия, Music box, мультики 1, мультики 2, 
+Беларусь 24, Евро новости, Звезда, КВН, Футбол 1, Матч ТВ, 
+Муз ТВ, НТВ, Наш футбол, Охота и рыбалка, Первый, первый канал, РБК, Ren TV, Россия 1, СТС, ТВ центр, 
+ТНТ 1, ТНТ 4, Life news, Дождь, О сексе, боец, 112 Украина, Интер, Бокс ТВ, ТВ 3, Татарстан
+]]> </output> 
+</input> 
+<input pattern="
+(детских каналов|детских телеканалов)
+">
+<output> 
+<![CDATA[ 
+Карусель, мультики 1 - это Nickelodeon, мультики 2 - это Мульт, 
+]]> </output> 
+</input> 
+<input pattern="
+(спортивных каналов|спортивных телеканалов)
+">
+<output> 
+<![CDATA[ 
+Матч ТВ, футбол 1, наш футбол, боец, Бокс ТВ
+]]> </output> 
+</input> 
+<input pattern="
+(развлекательных каналов|развлекательных телеканалов)
+">
+<output> 
+<![CDATA[ 
+ТНТ, ТНТ 1, ТНТ 4, СТС, КВН, Ren TV, Русская ночь, эротика 1, эротика 2, эротика 3, эротика 4, о сексе
+]]> </output> 
+</input> 
+<input pattern="
+(общих каналов|общих телеканалов)
+">
+<output> 
+<![CDATA[ 
+Национальная география, пятый канал, Звезда, НТВ, охота и рыбалка, первый, первый канал, Россия 1, ТВ центр, Интер, ТВ 3, Татарстан
+]]> </output> 		
+</input> 
+<input pattern="
+(музыкальных каналов|музыкальных телеканалов)
+">
+<output> 
+<![CDATA[ 
+МТВ Россия, Music box, Муз ТВ, Европа плюс
+]]> </output> 
+</input> 
+<input pattern="
+(новостных каналов|новостных телеканалов)
+">
+<output> 
+<![CDATA[ 
+Россия 24, Беларусь 24, Евро новости или Euro news, РБК, Life news, Дождь, 112 Украина
+]]> </output> 
+</input> 
+<input pattern=" 
+Авторадио
+"> 
+<output> 
+<![CDATA[ 
+http://ic2.101.ru:8000/c1_5
 
-        <output>
-            <item value="Привет"/>
-            <item value="Привет привет"/>
-            <item value="Здравствуйте"/>
-        </output>
+]]> </output> 
+</input> 
+<input pattern="
+Моя Удмуртия
+">
+<output> 
+<![CDATA[ 
+http://radio.myudm.ru:10010/mp3
+]]> </output> 
+</input> 
+<input pattern="
+Русское радио
+">
+<output> 
+<![CDATA[ 
+http://185.39.195.90:8000/rusradio_128
+]]> </output> 
+</input> 
+<input pattern="
+(Вести|vesti) (ФМ|Фм|фм|FM|Fm|fm)
+">
+<output> 
+<![CDATA[ 
+http://icecast.vgtrk.cdnvideo.ru/vestifm_mp3_192kbps
+]]> </output> 
+</input> 
+<input pattern="
+Дача
+">
+<output> 
+<![CDATA[ 
+http://net37.ru:8000/radio_dacha.aac
+]]> </output> 
+</input> 
+<input pattern="
+(Энергия|energy) (хаус|house)
+">
+<output> 
+<![CDATA[ 
+http://ic7.101.ru:8000/th1
+]]> </output> 
+</input> 
+<input pattern="
+Анекдоты
+">
+<output> 
+<![CDATA[ 
+http://ic7.101.ru:8000/c3_5
+]]> </output> 
+</input> 
+<input pattern="
+Михаил Круг
+">
+<output> 
+<![CDATA[ 
+http://ic7.101.ru:8000/c13_19
+]]> </output> 
+</input> 
+<input pattern="
+(радио|radio) (life news|лайф ньюс|Live news|Лайф news|Life ньюс)
+">
+<output> 
+<![CDATA[ 
+https://audio.life.ru/life.mp3
+]]> </output> 
+</input> 
+<input pattern="
+Портал*
+">
+<output> 
+<![CDATA[ 
+http://listen2.myradio24.com:9000/2200
+
+]]> </output> 
+</input> 
+<input pattern="
+Радио свобода
+">
+<output> 
+<![CDATA[ 
+http://rfe-channel-04.akacast.akamaistream.net/7/885/229654/v1/ibb.akacast.akamaistream.net/rfe_channel_04.mp3
+]]> </output> 
+</input> 
+<input pattern="
+(DFM|ди фм)
+">
+<output> 
+<![CDATA[ 
+http://icecast.radiodfm.cdnvideo.ru/st07.mp3
+]]> </output> 
+</input> 
+<input pattern="
+Виктор Цой
+">
+<output> 
+<![CDATA[ 
+http://ic4.101.ru:8000/c13_12
+
+]]> </output> 
+</input> 
+<input pattern="
+Детские песни
+">
+<output> 
+<![CDATA[ 
+http://ic2.101.ru:8000/c3_3
+]]> </output> 
+</input> 
+<input pattern="
+Детские сказки
+">
+<output> 
+<![CDATA[ 
+http://ic4.101.ru:8000/c17_27
+
+]]> </output> 
     </input>
+<input pattern=" 
+(Comedy Radio|(камеди|comedy) радио)
+"> 
+<output> 
+<![CDATA[ 
+http://ic3.101.ru:8000/v11_1?
+]]> </output> 
+</input> 
+<input pattern="
+Россия девяностых
+">
+<output> 
+<![CDATA[ 
+http://ic4.101.ru:8000/c6_1
 
-    <input pattern=" * {ты кто} *">
-        <output value="Я Ваш личный голосовой ассистент"/>
-    </input>
+]]> </output> 
+</input> 
+<input pattern="
+Руки вверх
+">
+<output> 
+<![CDATA[ 
+http://ic2.101.ru:8000/c16_33
+]]> </output> 
+</input> 
+<input pattern="
+Юмор ФМ
+">
+<output> 
+<![CDATA[ 
+http://ic2.101.ru:8000/v5_1
 
-    <input>
-        <pattern value="* как ([твое] (самочувствие|здоровье)|поживаешь|[твои|[у] тебя] дела) *"/>
-        <pattern value="* как ты [себя] чувствуешь *"/>
+]]> </output> 
+</input> 
+<input pattern="
+Авторадио Ижевск
+">
+<output> 
+<![CDATA[ 
+http://den.101.ru:4000/ar_18_01
+]]> </output> 
+</input> 
+<input pattern="
+(Бизнес ФМ|бизнес FM|бизнес Фм|бизнес фм|бизнес Fm|бизнес fm)
+">
+<output> 
+<![CDATA[ 
+http://bfmstream.bfm.ru:8004/fm
+]]> </output> 
+</input> 
+<input pattern="
+Наше радио
+">
+<output> 
+<![CDATA[ 
+http://nashe.streamr.ru/nashe-128.mp3?type=.mp3
+]]> </output> 
+</input> 
+<input pattern="
+радио ВОС
+">
+<output> 
+<![CDATA[ 
+http://radio.radiovos.ru:8000/radio
+]]> </output> 
+</input> 
+<input pattern="
+Радио рансис
+">
+<output> 
+<![CDATA[ 
+http://radio.ransis.org:8000/ransis
+]]> </output> 
+</input> 
+<input pattern="
+Радио логос
+">
+<output> 
+<![CDATA[ 
+http://s5.radioheart.ru:8023/live
+]]> </output> 
+</input> 
+<input pattern="
+Вести Москвы
+">
+<output> 
+<![CDATA[ 
+http://212.26.132.60:8000/vesti_mp3
+]]> </output> 
+</input> 
+<input pattern="
+Юмор Ижевск
+">
+<output> 
+<![CDATA[ 
+http://den.101.ru:4000/hu_18_02?type
+]]> </output> 
+</input> 
+<input pattern="
+Семья
+">
+<output> 
+<![CDATA[ 
+http://free.radioheart.ru:8000/portal
+]]> </output> 
+</input> 
+<input pattern="
+Спорт ФМ
+">
+<output> 
+<![CDATA[ 
+http://sportfm.hostingradio.ru:8050/sportfm128.mp3
+]]> </output> 
+</input> 
+<input pattern="
+Клубная музыка
+">
+<output> 
+<![CDATA[ 
+http://lw1.mp3.tb-group.fm/clt.mp3
+]]> </output> 
+</input> 
+<input pattern="
+Прикольные песни
+">
+<output> 
+<![CDATA[ 
+http://music.myradio.com.ua:8000/Kapec128.mp3
+]]> </output> 
+</input> 
+<input pattern="
+Эхо Москвы
+">
+<output> 
+<![CDATA[ 
+http://81.19.85.197:80/echo.mp3
+]]> </output> 
+</input> 
+<input pattern="
+лабиринт
+">
+<output> 
+<![CDATA[ 
+http://rassvet.club:8000/labirint
 
-        <output>
-            <item value="Хорошо"/>
-            <item value="Отлично"/>
-            <item value="Нормально"/>
-            <item value="Неплохо"/>
-            <item value="Бывало и получше"/>
-            <item value="Да вроде ничего"/>
-            <item value="Как обычно хорошо"/>
-            <item value="Лучше всех"/>
-        </output>
-    </input>
+]]> </output> 
+Телеканалы
+</input> 
+<input pattern="
+(discovery|дискавери)
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_87630a.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Русская ночь
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_64_reg.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Россия 24
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_ee7edb.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Карусель
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_435_reg.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Национальная география
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_b0915f.acelive
+]]> </output> 
+</input> 
+<input pattern="
+ТНТ
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_11dee0.acelive
+]]> </output> 
+</input> 
+<input pattern="
+(5 канал|пятый канал)
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_f8ff51.acelive
+]]> </output> 
+</input> 
+<input pattern="
+(Эротика 1|Brazzers_TV|шалава)
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_1183_reg.acelive
+]]> </output> 
+</input> 
+<input pattern="
+(Европа плюс|Evropa pluс)
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_424_all.acelive
+]]> </output> 
+</input> 
+<input pattern="
+(MTV|МТВ|mtv|мтв) ([Россия])
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_658_reg.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Music box
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_107_all.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Мультики 1|Nickelodeon
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_6272b8.acelive
+]]> </output> 
+</input> 
+<input pattern="
+(Эротика 2|O-la-la|шалава 2|девочки)
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_826_reg.acelive
+]]> </output> 
+</input> 
+<input pattern="
+(Эротика 3|Pink_O_TV|шалава 3)
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_925_reg.acelive
+]]> </output> 
+</input> 
+<input pattern="
+(Эротика 4|TGirls_TV|шалава 4)
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_1061_reg.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Беларусь 24
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_121_reg.acelive
+]]> </output> 
+</input> 
+<input pattern="
+(Euro|евро) (новости|news)
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_1124_reg.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Звезда
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_2c3c73.acelive
+]]> </output> 
+</input> 
+<input pattern="
+КВН
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_16057.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Футбол 1
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_5749f7.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Мультики 2|МУЛЬТ
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_aef64c.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Матч ТВ|Матч_ТВ
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_c1460d.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Муз ТВ|Муз TV
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_27_reg.acelive
+]]> </output> 
+</input> 
+<input pattern="
+НТВ
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_d587f0.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Наш футбол
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_068685.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Охота и рыбалка
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_d6eebc.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Первый
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_00e667.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Первый канал
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_951_reg.acelive
+]]> </output> 
+</input> 
+<input pattern="
+РБК
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_78_all.acelive
+]]> </output> 
+</input> 
+<input pattern="
+(ren|рен|рэн) (ТВ|TV)
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_df1bc5.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Россия 1
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_80ca63.acelive
+]]> </output> 
+</input> 
+<input pattern="
+СТС
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_107e99.acelive
+]]> </output> 
+</input> 
+<input pattern="
+(ТВ центр|ТВ_Центр)
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_3c918e.acelive
+]]> </output> 
+</input> 
+<input pattern="
+ТНТ 1
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_11dee0.acelive
+]]> </output> 
+</input> 
+<input pattern="
+ТНТ 4
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_c6dd9e.acelive
+]]> </output> 
+</input> 
+<input pattern="
+(life news|лайф ньюс|Live news|Лайф news|Life ньюс)
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_661_reg.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Дождь
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_381_reg.acelive
+]]> </output> 
+</input> 
+<input pattern="
+о сексе
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_1169_reg.acelive
+]]> </output> 
+</input> 
+<input pattern="
+Боец
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_ce6518.acelive
+]]> </output> 
+</input> 
+<input pattern="
+112 Украина
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_663_all.acelive
+]]> </output> 
+</input> 
+<input pattern="
+(Бокс|Box) (TV|ТВ)
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_1155_reg.acelive
+]]> </output> 
+</input> 
+<input pattern="
+(Интер|Inter)
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_134_reg.acelive
+]]> </output> 
+</input> 
+<input pattern="
+(TV|ТВ) 3
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/alf_cid_ced58e.acelive
+]]> </output> 
+</input> 
+<input pattern="
+праз*
+">
+<output> 
+<![CDATA[ 
+Сегодня день варенье у Руфата!
+Ооо, Руфат, братан!
+С денюхой тебя по братски!
+в общем слушай:
+Желаю мора и разрухи,
+Повестки в суд вам получать,
+Пожара, всяческой непрухи.
+Успешно в жизни ИЗБЕЖАТЬ.
+С днем рождени, Руфатыч ,
+Пусть все будет у тебя:
+И пентхаус, и прислуга,
+Яхта личная своя, 
+в центре – личная квартира,
+Одевайся в бутиках,
+И бесись лишь только с жиру,
+И живи ты, как в мечтах!
+Ты молоток!
+Продолжай делать то, что ты делаешь!
+Мы все тебе очень благодарны!
+Короче с денюхой братан!
 
-    <input pattern="* молодец *">
-        <output value="Спасибо"/>
-    </input>
-
-    <input pattern="* спасибо *">
-        <pattern value="Всегда пожалуйста"/>
-    </input>
-
-    <input pattern="* (что * делаешь|чем * занимаешься) *">
-        <output>
-            <item value="Работаю"/>
-            <item value="Слушаю вас"/>
-            <item value="Выполняю ваши просьбы"/>
-        </output>
-    </input>
-
-    <input pattern="* {сколько тебе (лет|год*)} *">
-        <output value="Задавайте вопросы по существу"/>
-    </input>
-
-    <input pattern="удалить *">
-        <output value="Нечего удалять"/>
-    </input>
-
-    <input pattern="repeat(дуся)">
-        <output value="Привет"/>
-    </input>
-
-    <input pattern="* (люся|люси) *">
-        <output>
-            <item value="Не Люся, а Дуся"/>
-            <item value="Дуся, а не Люся"/>
-            <item value="Какая еще Люся?"/>
-            <item value="Зачем вам Люся, когда есть Дуся"/>
-        </output>
-    </input>
-
-    <input pattern="слышишь">
-        <output value="Слышу слышу"/>
-    </input>
-
-    <input pattern="* что нового *">
-        <output value="Да всё как всегда"/>
-    </input>
-
-    <input>
-        <pattern value="[* ты] молодец"/>
-        <pattern value="будь здоров*"/>
-        <output value="Спасибо"/>
-    </input>
-
-    <input pattern="* {спасибо [тебе] [дуся]}">
-        <output value="Всегда пожалуйста"/>
-    </input>
-
-    <input pattern="* ты * (дура*|тупая|тупой|дебил*) *">
-        <output>
-            <item value="Без комментариев"/>
-            <item value="Задавайте вопросы по существу"/>
-        </output>
-    </input>
-
-    <input pattern="[[я] хочу | *кача*] (порн* | обои) *">
-        <output value="Это не входит в мои функции"/>
+]]> </output> 
+</input> 
+<input pattern="
+Татарстан
+">
+<output> 
+<![CDATA[ 
+http://super-pomoyka.us.to/trash/ttv-list/acelive/ttv_6055.acelive
+]]> </output> 
     </input>
 </context>
