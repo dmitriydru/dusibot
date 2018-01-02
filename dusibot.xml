@@ -266,7 +266,8 @@ http://nashe.streamr.ru/nashe-128.mp3?type=.mp3
 ">
 <output> 
 <![CDATA[ 
-http://radio.radiovos.ru:8000/radio
+http://radiovos.ru:9000/radiovos-128
+
 ]]> </output> 
 </input> 
 <input pattern="
